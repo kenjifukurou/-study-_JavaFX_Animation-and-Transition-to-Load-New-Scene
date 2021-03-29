@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="root_AnchorPane" prefHeight="360.0" prefWidth="480.0" style="-fx-background-color: #e0a641;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerScene3">
+   <children>
+      <Button fx:id="btn_load" layoutX="165.0" layoutY="155.0" mnemonicParsing="false" onAction="#handleLoad" prefHeight="50.0" prefWidth="150.0" text="Load Scene 1" />
+   </children>
+</AnchorPane>
