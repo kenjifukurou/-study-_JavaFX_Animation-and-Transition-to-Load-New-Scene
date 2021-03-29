@@ -1,5 +1,5 @@
-Controller.java
- Controller
+ControllerScene3.java
+ ControllerScene3
 ControllerScene2.java
  ControllerScene2
 Main.java
@@ -7,5 +7,5 @@ Main.java
 ControllerScene1.java
  ControllerScene1
  ControllerScene1$1
-ControllerScene3.java
- ControllerScene3
+Controller.java
+ Controller

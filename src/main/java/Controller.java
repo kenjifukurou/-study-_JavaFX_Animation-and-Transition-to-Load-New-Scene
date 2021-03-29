@@ -1,7 +1,4 @@
-import javafx.animation.Interpolator;
-import javafx.animation.KeyFrame;
-import javafx.animation.KeyValue;
-import javafx.animation.Timeline;
+import javafx.animation.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -25,6 +22,12 @@ public class Controller {
 
     @FXML
     private Button btn_load;
+
+    public void initialize() {
+        System.out.println("initialized");
+
+        btn_load.setOpacity(0.2f);
+    }
 
     @FXML
     void handleLoad(ActionEvent event) throws IOException {
@@ -50,9 +53,41 @@ public class Controller {
     }
 
     @FXML
-    void handleMouseOver(MouseEvent event) {
+    void handleMouseEnter(MouseEvent event) {
         System.out.println("mouse enter");
-//        btn_check.setStyle("-fx-background-color: white");
+
+        ScaleTransition scaleT = new ScaleTransition(Duration.seconds(0.2), btn_load);
+        scaleT.setFromX(1f);
+        scaleT.setFromY(1f);
+        scaleT.setToX(1.2f);
+        scaleT.setToY(1.2f);
+        scaleT.setInterpolator(Interpolator.EASE_IN);
+
+        FadeTransition fadeT = new FadeTransition(Duration.seconds(0.2), btn_load);
+        fadeT.setFromValue(0.2);
+        fadeT.setToValue(1);
+
+        ParallelTransition allTransition = new ParallelTransition(btn_load, scaleT, fadeT);
+        allTransition.play();
+    }
+
+    @FXML
+    void handleMouseExit(MouseEvent event) {
+        System.out.println("mouse exit");
+
+        ScaleTransition scaleT = new ScaleTransition(Duration.seconds(0.2), btn_load);
+        scaleT.setFromX(1.2f);
+        scaleT.setFromY(1.2f);
+        scaleT.setToX(1f);
+        scaleT.setToY(1f);
+        scaleT.setInterpolator(Interpolator.EASE_IN);
+
+        FadeTransition fadeT = new FadeTransition(Duration.seconds(0.2), btn_load);
+        fadeT.setFromValue(1);
+        fadeT.setToValue(0.2);
+
+        ParallelTransition allTransition = new ParallelTransition(btn_load, scaleT, fadeT);
+        allTransition.play();
     }
 
 }

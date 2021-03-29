@@ -8,7 +8,7 @@
    <children>
       <AnchorPane fx:id="root_AnchorPane" prefHeight="360.0" prefWidth="480.0" style="-fx-background-color: white;">
          <children>
-            <Button fx:id="btn_load" alignment="CENTER" layoutX="165.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleLoad" onMouseEntered="#handleMouseOver" prefHeight="50.0" prefWidth="150.0" text="Load Scene 1" />
+            <Button fx:id="btn_load" alignment="CENTER" layoutX="165.0" layoutY="95.0" mnemonicParsing="false" onAction="#handleLoad" onMouseEntered="#handleMouseEnter" onMouseExited="#handleMouseExit" prefHeight="50.0" prefWidth="150.0" text="Load Scene 1" />
          </children>
       </AnchorPane>
    </children>
